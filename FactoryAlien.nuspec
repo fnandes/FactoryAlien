@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>FactoryAlien</id>
+    <version>0.1.0</version>
+    <authors>Pedro Henrique B. Fernandes</authors>
+    <owners>Pedro Henrique B. Fernandes</owners>
+    <licenseUrl>https://raw.githubusercontent.com/pedrohfernandes/FactoryAlien/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <title>FactoryAlien</title>
+	<description>A .NET fake data generator inspired by ruby's factory_girl gem.</description>
+    <releaseNotes>First release.</releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <tags>factory girl, fake data, data generation, test data</tags>
+  </metadata>
+  <files>
+	<file src="src\**\*.cs" target="src" />
+  </files>
+</package>
