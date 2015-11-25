@@ -57,8 +57,8 @@ buildableList.Add(4)
 				 product.Category = "Computer";
 			  });
 ```
-This code above will create a list with 14 products:
-5 products with category equals to "Games";
-4 products with all properties filled with random values;
-3 products with value equals to 25.00;
-2 products with Status equals to "In Stock" and Category equals to "Computer";
+This code above will create a list with 14 products:  
+5 products with category equals to "Games";  
+4 products with all properties filled with random values;  
+3 products with value equals to 25.00;  
+2 products with Status equals to "In Stock" and Category equals to "Computer";  
