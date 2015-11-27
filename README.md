@@ -50,15 +50,15 @@ You can use fluent interface to create a more complex list with random and custo
 ```csharp
 var factory = FactoryAlien.Define<Product>();
 var fakeProducts = factory.CreateList(5, product => product.Category = "GAMES");
-buildableList.Add(4)
+fakeProducts.Add(4)
              .Add(3, product => product.Value = 25.00)
              .Add(2, product => {
 				 product.Status = "In Stock";
 				 product.Category = "Computer";
 			  });
 ```
-This code above will create a list with 14 products:
-5 products with category equals to "Games";
-4 products with all properties filled with random values;
-3 products with value equals to 25.00;
-2 products with Status equals to "In Stock" and Category equals to "Computer";
+This code above will create a list with 14 products:  
+5 products with category equals to "Games";  
+4 products with all properties filled with random values;  
+3 products with value equals to 25.00;  
+2 products with Status equals to "In Stock" and Category equals to "Computer";  
