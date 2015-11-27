@@ -1,7 +1,9 @@
 FactoryAlien - A fake data generator for .Net.
 ===
 
-Travis:   [![Travis](https://travis-ci.org/aspnet/Mvc.svg?branch=dev)](https://travis-ci.org/aspnet/Mvc)  
+Travis: [![Travis](https://travis-ci.org/pedrohfernandes/FactoryAlien.svg?branch=develop)](https://travis-ci.org/pedrohfernandes/FactoryAlien)  
+
+Nuget: [![NuGet](https://img.shields.io/nuget/dt/FactoryAlien.svg)](https://www.nuget.org/packages/FactoryAlien/)  
 
 ## Project Description ##
 Generate fake data to improve yout unit tests.
