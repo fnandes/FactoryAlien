@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace FactoryAlien
+namespace FactoryAlienDotNet
 {
     /// <summary>
     /// Creates new <typeparamref name="T"/> instances.

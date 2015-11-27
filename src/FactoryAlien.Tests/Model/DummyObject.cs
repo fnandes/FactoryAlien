@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FactoryAlien.Tests.Model
+namespace FactoryAlienDotNet.Tests.Model
 {
     public class DummyObject
     {

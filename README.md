@@ -1,3 +1,10 @@
+FactoryAlien - A fake data generator for .Net.
+===
+
+Travis: [![Travis](https://travis-ci.org/pedrohfernandes/FactoryAlien.svg?branch=develop)](https://travis-ci.org/pedrohfernandes/FactoryAlien)  
+
+Nuget: [![NuGet](https://img.shields.io/nuget/dt/FactoryAlien.svg)](https://www.nuget.org/packages/FactoryAlien/)  
+
 ## Project Description ##
 Generate fake data to improve yout unit tests.
 FactoryAlien is a package inspired by factory_girl gem to help you to creating fake data to your tests.

@@ -8,7 +8,7 @@
     <ProjectGuid>{4332CCEC-CB65-4821-B4A6-4F967C2AF6AC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FactoryAlien.Tests</RootNamespace>
+    <RootNamespace>FactoryAlienDotNet.Tests</RootNamespace>
     <AssemblyName>FactoryAlien.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -54,13 +54,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\FactoryAlien\FactoryAlien.csproj">
       <Project>{b044a260-c192-4d16-8dfd-43fcdae3ab09}</Project>
       <Name>FactoryAlien</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
