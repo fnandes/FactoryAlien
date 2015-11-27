@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FactoryAlien
+namespace FactoryAlienDotNet
 {
     /// <summary>
     /// FactoryAlien main class that defines object factories.

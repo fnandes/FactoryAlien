@@ -1,12 +1,8 @@
-﻿using FactoryAlien.Tests.Model;
-using System;
-using System.Collections.Generic;
+﻿using FactoryAlienDotNet.Tests.Model;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
-namespace FactoryAlien.Tests
+namespace FactoryAlienDotNet.Tests
 {
     public class BuildableCollectionTests
     {

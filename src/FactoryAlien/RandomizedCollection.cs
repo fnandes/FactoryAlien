@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FactoryAlien
+namespace FactoryAlienDotNet
 {
     /// <summary>
     /// Collection of randomly generated objects.
