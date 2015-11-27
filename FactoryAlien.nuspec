@@ -2,18 +2,24 @@
 <package>
   <metadata>
     <id>FactoryAlien</id>
-    <version>0.1.0</version>
+    <version>0.3.3</version>
     <authors>Pedro Henrique B. Fernandes</authors>
     <owners>Pedro Henrique B. Fernandes</owners>
+    <projectUrl>https://github.com/pedrohfernandes/FactoryAlien</projectUrl>
     <licenseUrl>https://raw.githubusercontent.com/pedrohfernandes/FactoryAlien/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <title>FactoryAlien</title>
-	<description>A .NET fake data generator inspired by ruby's factory_girl gem.</description>
-    <releaseNotes>First release.</releaseNotes>
+    <title>FactoryAlien - A fake object generator for testing!</title>
+    <summary>A fake object generator to make test-driven development more productive.</summary>
+    <description>A .NET fake data generator inspired by ruby's factory_girl gem 
+to make test-driven development more productive.
+
+Create your fake data for testing purposes more easily with random generators and fluent interface!</description>
+    <releaseNotes>Fix nuget pack problem.</releaseNotes>
     <copyright>Copyright 2015</copyright>
-    <tags>factory girl, fake data, data generation, test data</tags>
+    <tags>fixture tdd factory-girl data-builder fake-data data-generation test-data</tags>
   </metadata>
   <files>
-	<file src="src\**\*.cs" target="src" />
+    <file src="src\FactoryAlien\bin\Release\FactoryAlien.dll" target="lib\net45" />
+    <file src="src\FactoryAlien\bin\Release\FactoryAlien.xml" target="lib\net45" />
   </files>
 </package>

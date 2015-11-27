@@ -1,0 +1,10 @@
+language: csharp
+solution: ./src/FactoryAlien.sln
+
+install:
+  - nuget restore ./src/FactoryAlien.sln
+  - nuget install xunit.runners.console -Version 2.1.0 -OutputDirectory testrunner
+
+script:
+  - xbuild /p:Configuration=Release ./src/FactoryAlien.sln
+  - mono ./testrunner/xunit.runner.console.2.1.0/tools/xunit.console.exe ./src/FactoryAlien.Tests/bin/Release/FactoryAlien.Tests.dll

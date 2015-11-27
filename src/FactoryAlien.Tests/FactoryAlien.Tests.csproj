@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FactoryAlienDotNet.Tests</RootNamespace>
-    <AssemblyName>FactoryAlienDotNet.Tests</AssemblyName>
+    <AssemblyName>FactoryAlien.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
