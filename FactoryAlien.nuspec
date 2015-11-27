@@ -8,7 +8,7 @@
     <projectUrl>https://github.com/pedrohfernandes/FactoryAlien</projectUrl>
     <licenseUrl>https://raw.githubusercontent.com/pedrohfernandes/FactoryAlien/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <title>FactoryAlien - A fake object generator for testing!</title>
+    <title>FactoryAlien</title>
     <summary>A fake object generator to make test-driven development more productive.</summary>
     <description>A .NET fake data generator inspired by ruby's factory_girl gem 
 to make test-driven development more productive.
