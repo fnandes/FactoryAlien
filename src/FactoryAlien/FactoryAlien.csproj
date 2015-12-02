@@ -50,7 +50,7 @@
     <Compile Include="IBuildableCollection.cs" />
     <Compile Include="IFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RandomizedCollection.cs" />
+    <Compile Include="BuildableCollection.cs" />
     <Compile Include="Randomizer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

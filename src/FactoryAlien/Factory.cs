@@ -7,9 +7,9 @@ using System.Text;
 namespace FactoryAlienDotNet
 {
     /// <summary>
-    /// Creates new <typeparamref name="T"/> instances.
+    /// Creates new instances of <typeparamref name="T"/>.
     /// </summary>
-    /// <typeparam name="T">Object type to create new random instances.</typeparam>
+    /// <typeparam name="T">Object type to generate new instances.</typeparam>
     public class Factory<T> : IFactory<T>
         where T : class, new()
     {
@@ -39,9 +39,9 @@ namespace FactoryAlienDotNet
         }
 
         /// <summary>
-        /// Create one instance of <typeparamref name="T"/> and set custom user values with transformer action.
+        /// Create one instance of <typeparamref name="T"/> and set custom values with an <see cref="Action"/>.
         /// </summary>
-        /// <param name="transformer">Action that will set custom user values to created instances.</param>
+        /// <param name="transformer"><see cref="Action"/> thats intercept object creation and set custom values.</param>
         /// <returns>A new instance of <typeparamref name="T"/></returns>
         public T CreateOne(Action<T> transformer)
         {
@@ -69,9 +69,9 @@ namespace FactoryAlienDotNet
         }
 
         /// <summary>
-        /// Create a list of <typeparamref name="T"/> and set custom user values with transformer action.
+        /// Create a list of <typeparamref name="T"/> and set custom user values with an <see cref="Action"/>.
         /// </summary>
-        /// <param name="transformer">Action that will set custom user values to created instances.</param>
+        /// <param name="transformer"><see cref="Action"/> thats intercept object creation and set custom values.</param>
         /// <param name="count">Number of instances to create.</param>
         /// <returns>A new instance of <typeparamref name="T"/></returns>
         public IBuildableCollection<T> CreateList(int count, Action<T> transformer)
@@ -86,7 +86,7 @@ namespace FactoryAlienDotNet
             return new BuildableCollection<T>(objectList);
         }
 
-        public void FetchWithRandomData(T createdObject)
+        private void FetchWithRandomData(T createdObject)
         {
             var objectType = typeof(T);
             var properties = from prop in objectType.GetProperties()
@@ -102,7 +102,7 @@ namespace FactoryAlienDotNet
             }
         }
 
-        public void SetRandomValue(Type objectType, PropertyInfo property, object obj)
+        private void SetRandomValue(Type objectType, PropertyInfo property, object obj)
         {
             var propertyType = property.PropertyType;
 
