@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Factoryalien by pedrohfernandes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Factoryalien</h1>
+      <h2 class="project-tagline">A .NET fake data generator inspired by ruby&#39;s factory_girl gem.</h2>
+      <a href="https://github.com/pedrohfernandes/FactoryAlien" class="btn">View on GitHub</a>
+      <a href="https://github.com/pedrohfernandes/FactoryAlien/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/pedrohfernandes/FactoryAlien/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="factoryalien---a-fake-data-generator-for-net" class="anchor" href="#factoryalien---a-fake-data-generator-for-net" aria-hidden="true"><span class="octicon octicon-link"></span></a>FactoryAlien - A fake data generator for .Net.</h1>
+
+<p>Travis: <a href="https://travis-ci.org/pedrohfernandes/FactoryAlien"><img src="https://travis-ci.org/pedrohfernandes/FactoryAlien.svg?branch=develop" alt="Travis"></a>  </p>
+
+<p>Nuget: <a href="https://www.nuget.org/packages/FactoryAlien/"><img src="https://img.shields.io/nuget/dt/FactoryAlien.svg" alt="NuGet"></a>  </p>
+
+<h2>
+<a id="project-description" class="anchor" href="#project-description" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project Description</h2>
+
+<p>Generate fake data to improve yout unit tests.
+FactoryAlien is a package inspired by factory_girl gem to help you to creating fake data to your tests.</p>
+
+<h2>
+<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h2>
+
+<p>Factoryalien is designed to make test-driven development more productive and unit tests more refactoring-safe.</p>
+
+<h2>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<p>Install FactoryAlien with NuGet Package Manager:</p>
+
+<blockquote>
+<p>Install-Package FactoryAlien</p>
+</blockquote>
+
+<p>To start creating fake data to your tests, you just need to create a factory object with generic type to will be generated.</p>
+
+<div class="highlight highlight-source-cs"><pre>IFactory&lt;User&gt; userFactory = FactoryAlien.Define&lt;User&gt;();</pre></div>
+
+<h3>
+<a id="1-create-a-single-object" class="anchor" href="#1-create-a-single-object" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Create a single object.</h3>
+
+<p>To create a single fake object, use CreateOne() method.</p>
+
+<div class="highlight highlight-source-cs"><pre>User user = userFactory.CreateOne();</pre></div>
+
+<p>So you can specify your custom values! Do following:</p>
+
+<div class="highlight highlight-source-cs"><pre>User user = userFactory.CreateOne(user =&gt; {
+    user.FirstName = <span class="pl-s"><span class="pl-pds">"</span>Gabriel<span class="pl-pds">"</span></span>;
+});</pre></div>
+
+<p>This code will create a new User instance with "Gabriel" value in FirstName property, 
+and random values in others properties.</p>
+
+<h3>
+<a id="2-create-an-object-list" class="anchor" href="#2-create-an-object-list" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Create an object list.</h3>
+
+<p>To create a fake object list, use CreateList(size) method.</p>
+
+<div class="highlight highlight-source-cs"><pre><span class="pl-k">var</span> userList = userFactory.CreateList(<span class="pl-c1">3</span>);</pre></div>
+
+<p>This code will create a list with 3 fake objects.</p>
+
+<p>You can specify your custom values when creating lists too! Do following:</p>
+
+<div class="highlight highlight-source-cs"><pre><span class="pl-k">var</span> userList = userFactory.CreateList(<span class="pl-c1">3</span>, user =&gt; {
+    user.FirstName = <span class="pl-s"><span class="pl-pds">"</span>Gabriel<span class="pl-pds">"</span></span>;
+});</pre></div>
+
+<p>This code will create a list with 3 fake User instances with "Gabriel" value in FirstName property, 
+and random values in others properties.</p>
+
+<h3>
+<a id="3-building-complex-lists" class="anchor" href="#3-building-complex-lists" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Building complex lists.</h3>
+
+<p>You can use fluent interface to create a more complex list with random and customized values, see:</p>
+
+<div class="highlight highlight-source-cs"><pre><span class="pl-k">var</span> factory = FactoryAlien.Define&lt;Product&gt;();
+<span class="pl-k">var</span> fakeProducts = factory.CreateList(<span class="pl-c1">5</span>, product =&gt; product.Category = <span class="pl-s"><span class="pl-pds">"</span>GAMES<span class="pl-pds">"</span></span>);
+fakeProducts.Add(<span class="pl-c1">4</span>)
+             .Add(<span class="pl-c1">3</span>, product =&gt; product.Value = <span class="pl-c1">25.00</span>)
+             .Add(<span class="pl-c1">2</span>, product =&gt; {
+                 product.Status = <span class="pl-s"><span class="pl-pds">"</span>In Stock<span class="pl-pds">"</span></span>;
+                 product.Category = <span class="pl-s"><span class="pl-pds">"</span>Computer<span class="pl-pds">"</span></span>;
+              });</pre></div>
+
+<p>This code above will create a list with 14 products:<br>
+5 products with category equals to "Games";<br>
+4 products with all properties filled with random values;<br>
+3 products with value equals to 25.00;<br>
+2 products with Status equals to "In Stock" and Category equals to "Computer";  </p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/pedrohfernandes/FactoryAlien">Factoryalien</a> is maintained by <a href="https://github.com/pedrohfernandes">pedrohfernandes</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
