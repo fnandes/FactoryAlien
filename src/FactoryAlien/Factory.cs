@@ -114,39 +114,39 @@ namespace FactoryAlienDotNet
             switch (propertyType.Name)
             {
                 case STRING_TYPE:
-                    property.SetValue(obj, Randomizer.String());
+                    property.SetValue(obj, Any.String());
                     break;
                 case BYTE_TYPE:
-                    property.SetValue(obj, Randomizer.Byte());
+                    property.SetValue(obj, Any.Byte());
                     break;
                 case DOUBLE_TYPE:
-                    property.SetValue(obj, Randomizer.Double());
+                    property.SetValue(obj, Any.Double());
                     break;
                 case SHORT_TYPE:
-                    property.SetValue(obj, Randomizer.Short());
+                    property.SetValue(obj, Any.Short());
                     break;
                 case INTEGER_TYPE:
-                    property.SetValue(obj, Randomizer.Int());
+                    property.SetValue(obj, Any.Int());
                     break;
                 case LONG_TYPE:
-                    property.SetValue(obj, Randomizer.Long());
+                    property.SetValue(obj, Any.Long());
                     break;
                 case DECIMAL_TYPE:
-                    property.SetValue(obj, Randomizer.Decimal());
+                    property.SetValue(obj, Any.Decimal());
                     break;
                 case FLOAT_TYPE:
-                    property.SetValue(obj, Randomizer.Float());
+                    property.SetValue(obj, Any.Float());
                     break;
                 case DATETIME_TYPE:
-                    property.SetValue(obj, Randomizer.DateTime());
+                    property.SetValue(obj, Any.DateTime());
                     break;
                 case BOOLEAN_TYPE:
-                    property.SetValue(obj, Randomizer.Boolean());
+                    property.SetValue(obj, Any.Boolean());
                     break;
                 default:
                     if (propertyType.IsEnum)
                     {
-                        property.SetValue(obj, Randomizer.Enum(enumType: propertyType));
+                        property.SetValue(obj, Any.Enum(enumType: propertyType));
                     }
                     break;
             }
