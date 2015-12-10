@@ -1,6 +1,8 @@
 FactoryAlien - A fake data generator for .Net.
 ===
 
+[![Join the chat at https://gitter.im/pedrohfernandes/FactoryAlien](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/pedrohfernandes/FactoryAlien?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Travis: [![Travis](https://travis-ci.org/pedrohfernandes/FactoryAlien.svg?branch=develop)](https://travis-ci.org/pedrohfernandes/FactoryAlien)  
 
 Nuget: [![NuGet](https://img.shields.io/nuget/dt/FactoryAlien.svg)](https://www.nuget.org/packages/FactoryAlien/)  
