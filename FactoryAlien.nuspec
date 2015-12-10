@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>FactoryAlien</id>
-    <version>0.3.3</version>
+    <version>1.0.0</version>
     <authors>Pedro Henrique B. Fernandes</authors>
     <owners>Pedro Henrique B. Fernandes</owners>
     <projectUrl>https://github.com/pedrohfernandes/FactoryAlien</projectUrl>
@@ -14,12 +14,12 @@
 to make test-driven development more productive.
 
 Create your fake data for testing purposes more easily with random generators and fluent interface!</description>
-    <releaseNotes>Fix nuget pack problem.</releaseNotes>
+    <releaseNotes>Make random value generators public to be reusable across testing.</releaseNotes>
     <copyright>Copyright 2015</copyright>
     <tags>fixture tdd factory-girl data-builder fake-data data-generation test-data</tags>
   </metadata>
   <files>
-    <file src="src\FactoryAlien\bin\Release\FactoryAlien.dll" target="lib\net45" />
-    <file src="src\FactoryAlien\bin\Release\FactoryAlien.xml" target="lib\net45" />
+    <file src="src/FactoryAlien/bin/Release/FactoryAlien.dll" target="lib\net45" />
+    <file src="src/FactoryAlien/bin/Release/FactoryAlien.xml" target="lib\net45" />
   </files>
 </package>
