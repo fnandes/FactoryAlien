@@ -37,11 +37,10 @@ namespace FactoryAlienDotNet
         }
 
         /// <summary>
-        /// Add <paramref name="count"/> elements into collection 
-        /// with <paramref name="transformer"/> transformation.
+        /// Adds elements into collection with an custom action to add custom values.
         /// </summary>
         /// <param name="count">Number of elements to be added.</param>
-        /// <param name="transformer">Action to be performed with each added instance.</param>
+        /// <param name="transformer"><see cref="Action{T}"/> to be performed with each added instance.</param>
         public IBuildableCollection<T> Add(int count, Action<T> transformer)
         {
             var itemsToAdd = _factory.CreateList(count, transformer);

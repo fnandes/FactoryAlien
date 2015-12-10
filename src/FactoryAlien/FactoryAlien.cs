@@ -12,8 +12,9 @@ namespace FactoryAlienDotNet
     public static class FactoryAlien
     {
         /// <summary>
-        /// Creates a new Factory to create random objects.
+        /// Creates a new Factory to create random <see cref="IFactory{T}"/> objects.
         /// </summary>
+        /// <remarks />
         /// <typeparam name="T">Type that the factory will create random instances.</typeparam>
         /// <returns>A new Factory of defined type.</returns>
         public static IFactory<T> Define<T>()
