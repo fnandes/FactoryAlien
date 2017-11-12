@@ -103,29 +103,26 @@ namespace FactoryAlienDotNet
         /// <summary>
         /// Generates a random decimal number.
         /// </summary>
-        public static decimal Decimal()
+        public static decimal Decimal(decimal minValue = 1, decimal maxValue = decimal.MaxValue)
         {
-            int integerPart = Int();
-            return (decimal)(integerPart + random.NextDouble());
+            return (decimal)random.NextDouble() * (maxValue - minValue) + minValue;
         }
 
         /// <summary>
         /// Generates a random double-precision floating-point number.
         /// </summary>
-        public static double Double()
+        public static double Double(double minValue = 1, double maxValue = double.MaxValue)
         {
-            return random.NextDouble();
+            return random.NextDouble() * (maxValue - minValue) + minValue;
         }
 
         /// <summary>
         /// Generates a random single-precision floating-point number.
         /// </summary>
         /// <returns></returns>
-        public static float Float()
+        public static float Float(float minValue = 1, float maxValue = float.MaxValue)
         {
-            double mantissa = (random.NextDouble() * 2.0);
-            double exponent = Math.Pow(2.0, random.Next(1, 128));
-            return (float)(mantissa * exponent);
+            return (float) (random.NextDouble() * (maxValue - minValue) + minValue);
         }
 
         /// <summary>
